@@ -8,7 +8,7 @@ server:
 spring:
   profiles:dev
   application:
-    name:microservicecloud-config-dept-client
+    name:microservicecloud-config-fund-client
   datasoure:
     type:com.alibaba.druid.pool.DruidDataSource
     driver-class-name:com.mysql.jdbc.Driver
