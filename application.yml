@@ -1,14 +1,29 @@
-spring:
+﻿spring:
+  
   profiles:
-    active:
-     -dev
+    
+   active:
+     
+    -dev
+
+
 ---
+
 spring:
- profiles:dev
- application:
-   name:microservicecloud-config-bjyt-dev
----
-spring:
-  profiles:test
+ 
+  profiles:dev
+ 
   application:
-    name:microservicecloud-config-bjyt-test
+   
+  name:microservicecloud-config-bjyt-dev
+
+
+---
+
+spring:
+  
+  profiles:test
+  
+  application:
+    
+  name:microservicecloud-config-bjyt-test
