@@ -31,7 +31,7 @@ mybatis:
     -classpath*: mybatis/mapper/*.xml
 eureka:
     instance:
-       instance-id:microservicecloud-config-fund-client-dev
+       instance-id: microservicecloud-config-fund-client-dev
        prefer-ip-address: true
     client:
       register-with-eureka: false
@@ -67,8 +67,8 @@ mybatis:
     -classpath*: mybatis/mapper/*.xml
 eureka:
  instance:
-       instance-id:microservicecloud-config-fund-client-test
-       prefer-ip-address: true
+    instance-id: microservicecloud-config-fund-client-test
+    prefer-ip-address: true
  client:
    register-with-eureka: false
    fetch-registry: false
