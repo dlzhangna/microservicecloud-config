@@ -1,20 +1,20 @@
 spring:
   profiles:
     active:
-    -dev
+      - dev
 ---
 server:
-  port:2001
+  port: 2001
 spring:
-  profiles:dev
+  profiles: dev
   application:
-    name:microservicecloud-config-fund-client
+    name: microservicecloud-config-fund-client
   datasoure:
-    type:com.alibaba.druid.pool.DruidDataSource
-    driver-class-name:com.mysql.jdbc.Driver
-    url:jdbc:mysql://localhost:3306/fund1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true
-    username:root
-    password:root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fund1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -25,27 +25,29 @@ spring:
     testWhileIdle: true
     testOnBorrow: false
 mybatis:
-    config-location:classpath*:mybatis/mybatis.cfg.xml
-    type-aliases-package:com.bjyt.springcloud.entity
+    config-location: classpath*:mybatis/mybatis.cfg.xml
+    type-aliases-package: com.bjyt.springcloud.entity
     mapper-locations:
-    -classpath*:mybatis/mapper/*.xml
+    -classpath*: mybatis/mapper/*.xml
 eureka:
     client:
+      register-with-eureka: false
+      fetch-registry: false
       service-url:
-        defaultZone:http://eureka7001.com:7001/eureka
+        defaultZone: http://localhost:1001/eureka
 ---
 server:
-  port:2001
+  port: 2001
 spring:
-  profiles:test
+  profiles: test
   application:
-    name:microservicecloud-config-eureka-client
+    name: microservicecloud-config-eureka-client
 datasoure:
-    type:com.alibaba.druid.pool.DruidDataSource
-    driver-class-name:com.mysql.jdbc.Driver
-    url:jdbc:mysql://localhost:3306/fund2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true
-    username:root
-    password:root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fund2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -56,17 +58,17 @@ datasoure:
     testWhileIdle: true
     testOnBorrow: false
 mybatis:
-    config-location:classpath*:mybatis/mybatis.cfg.xml
-    type-aliases-package:com.bjyt.springcloud.entity
+    config-location: classpath*:mybatis/mybatis.cfg.xml
+    type-aliases-package: com.bjyt.springcloud.entity
     mapper-locations:
-    -classpath*:mybatis/mapper/*.xml
+    -classpath*: mybatis/mapper/*.xml
 eureka:
  instance:
-   hostname:localhost
+   hostname: localhost
  client:
-   register-with-eureka:false
-   fetch-registry:false
+   register-with-eureka: false
+   fetch-registry: false
    service-url:
-     defaultZone:http://localhost:1001/eureka/
+     defaultZone: http://localhost:1001/eureka/
    
     
