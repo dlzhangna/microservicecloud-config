@@ -4,7 +4,7 @@ spring:
     -dev
 ---
 server:
-  port:8001
+  port:2001
 spring:
   profiles:dev
   application:
@@ -35,7 +35,7 @@ eureka:
         defaultZone:http://eureka7001.com:7001/eureka
 ---
 server:
-  port:7001
+  port:2001
 spring:
   profiles:test
   application:
@@ -62,11 +62,11 @@ mybatis:
     -classpath*:mybatis/mapper/*.xml
 eureka:
  instance:
-   hostname:eureka7001.com
+   hostname:localhost
  client:
    register-with-eureka:false
    fetch-registry:false
    service-url:
-     defaultZone:http://eureka7001.com:7001/eureka/
+     defaultZone:http://localhost:1001/eureka/
    
     
