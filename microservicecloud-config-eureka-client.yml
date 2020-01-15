@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active:
+     - dev
+---
+
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-eureka-client
+    
+server:
+  port: 1001
+  
+eureka:
+  instance:
+    hostname: eureka1001.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka1001.com:1001/eureka/
+  
