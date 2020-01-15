@@ -31,13 +31,13 @@ mybatis:
     -classpath*: mybatis/mapper/*.xml
 eureka:
     instance:
-       instance-id: microservicecloud-config-fund-client-dev
+       instance-id: microservicecloud-config-fund-client
        prefer-ip-address: true
     client:
       register-with-eureka: false
       fetch-registry: false
       service-url:
-        defaultZone: http://localhost:1001/eureka
+        defaultZone: http://localhost:1001/eureka/
 ---
 server:
   port: 2001
@@ -67,7 +67,7 @@ mybatis:
     -classpath*: mybatis/mapper/*.xml
 eureka:
  instance:
-    instance-id: microservicecloud-config-fund-client-test
+    instance-id: microservicecloud-config-fund-client
     prefer-ip-address: true
  client:
    register-with-eureka: false
